@@ -11,7 +11,7 @@ WORKDIR /app
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Update the package index and install required dependencies
-RUN apt -qq update && apt -qq install -y git python3 python3-pip ffmpeg
+RUN apt-get update && apt-get install -y git python3 python3-pip ffmpeg
 
 # Copy the application files to the container
 COPY . .
